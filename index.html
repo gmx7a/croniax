@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FitLife Portal - Fitness & Diet</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <!-- Fixed Navigation -->
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="brand">FitLife Portal</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+		
+        <li><a href="#plans">Workout Plans</a></li>
+        <li><a href="#community">Health Community</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HOME / Banner -->
+    <section id="home" class="banner-section">
+      <div class="video-wrap">
+        <iframe id="bannerVideo" src="https://www.youtube.com/embed/ml6cT4AZdqI?rel=0&controls=1&autoplay=0&mute=1&modestbranding=1" 
+          title="Fitness video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="banner-text">
+        <h1>Welcome to FitLife Portal</h1>
+        <p>FitLife Portal is your all-in-one companion for workouts, nutrition tips, and a supportive health community. Use our plans, register for the community, and reach out via the Contact section.</p>
+      </div>
+    </section>
+
+    <!-- WORKOUT PLANS -->
+    <section id="plans" class="content-section">
+      <h2>Workout Plans</h2>
+      <p>Choose a plan that suits your fitness level. Click any plan for details (demo links).</p>
+
+      <table class="plans-table" aria-label="Workout plans">
+        <tr>
+          <td class="plan-card">
+            <div class="plan-icon">🏃‍♂️</div>
+            <h3>Cardio Boost</h3>
+            <ul>
+              <li>30 mins running</li>
+              <li>Interval training</li>
+              <li>Cooldown stretches</li>
+            </ul>
+          </td>
+          <td class="plan-card">
+            <div class="plan-icon">💪</div>
+            <h3>Strength Builder</h3>
+            <ul>
+              <li>Full-body weight training</li>
+              <li>3 sets x 8-12 reps</li>
+              <li>Progressive overload</li>
+            </ul>
+          </td>
+          <td class="plan-card">
+            <div class="plan-icon">🧘‍♀️</div>
+            <h3>Flex & Mobility</h3>
+            <ul>
+              <li>Daily stretching</li>
+              <li>Yoga flows</li>
+              <li>Joint mobility drills</li>
+            </ul>
+          </td>
+          <td class="plan-card">
+            <div class="plan-icon">🥗</div>
+            <h3>Nutrition Guidance</h3>
+            <ul>
+              <li>Calorie & macros</li>
+              <li>Meal planning tips</li>
+              <li>Hydration strategies</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="plan-card">
+            <div class="plan-icon">🚴‍♀️</div>
+            <h3>Cycling Program</h3>
+            <ul>
+              <li>Endurance rides</li>
+              <li>Cadence training</li>
+              <li>Bike maintenance tips</li>
+            </ul>
+          </td>
+          <td class="plan-card">
+            <div class="plan-icon">🥊</div>
+            <h3>HIIT & Boxing</h3>
+            <ul>
+              <li>High-intensity intervals</li>
+              <li>Core strengthening</li>
+              <li>Speed drills</li>
+            </ul>
+          </td>
+          <td class="plan-card">
+            <div class="plan-icon">🏋️‍♀️</div>
+            <h3>Gym Foundation</h3>
+            <ul>
+              <li>Machine & free weight basics</li>
+              <li>Form first approach</li>
+              <li>Weekly split routines</li>
+            </ul>
+          </td>
+          <td class="plan-card">
+            <div class="plan-icon">🧑‍🍳</div>
+            <h3>Healthy Cooking</h3>
+            <ul>
+              <li>Quick meal recipes</li>
+              <li>Balanced portions</li>
+              <li>Snack swaps</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- HEALTH COMMUNITY -->
+    <section id="community" class="content-section">
+      <h2>Health Community</h2>
+      <p>Join a friendly community that supports your health journey. Share tips, ask questions, and participate in group challenges.</p>
+
+      <div class="form-wrap">
+        <h3>Registration Form</h3>
+        <form id="regForm" autocomplete="off">
+          <label for="fname">Full Name</label>
+          <input type="text" id="fname" name="fname" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+
+          <label>Gender</label>
+          <div class="inline-group">
+            <label><input type="radio" name="gender" value="male" required> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+            <label><input type="radio" name="gender" value="other"> Other</label>
+          </div>
+
+          <label for="age">Age Group</label>
+          <select id="age" name="age" required>
+            <option value="">-- Select --</option>
+            <option>Under 18</option>
+            <option>18-30</option>
+            <option>31-45</option>
+            <option>46+</option>
+          </select>
+		  
+		  <label for="fitness">Fitness Level</label>
+          <select id="fitness" name="fitness" required>
+            <option value="">-- Select Your Level --</option>
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Advanced</option>
+            <option>Professional</option>
+          </select>
+
+          <label>Interests (select one or more)</label>
+          <div class="inline-group">
+            <label><input type="checkbox" name="interest" value="workout"> Workout</label>
+            <label><input type="checkbox" name="interest" value="nutrition"> Nutrition</label>
+            <label><input type="checkbox" name="interest" value="community"> Community Events</label>
+          </div>
+
+          <label for="bio">Short Bio</label>
+          <textarea id="bio" name="bio" rows="4" required></textarea>
+
+          <div class="form-buttons">
+            <button type="submit" id="submitBtn">Submit</button>
+            <button type="reset" id="resetBtn">Reset</button>
+          </div>
+        </form>
+        <div id="formMessage" aria-live="polite"></div>
+      </div>
+    </section>
+
+        <!-- CONTACT -->
+    <section id="contact" class="content-section">
+      <h2>Contact Us</h2>
+      <p>Have questions? Reach us directly by phone or email, or find our location below.</p>
+
+      <div class="contact-wrapper">
+        <!-- Contact Info -->
+        <div class="contact-info-centered">
+          <h3>Contact Info</h3>
+          <p><strong>Contact Person:</strong> FitLife Admin</p>
+          <p><strong>Phone:</strong> <a href="tel:+60123456789">+60 12-345 6789</a></p>
+          <p><strong>Email:</strong> <a href="mailto:hello@fitlife.example">hello@fitlife.example</a></p>
+          <p id="dateTime"></p>
+        </div>
+
+        <!-- Map Below -->
+        <div class="map-below">
+          <h3>Our Location</h3>
+          <iframe 
+            title="FitLife Portal Location - Kuala Lumpur" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.265591124915!2d101.68685571425899!3d3.1390039449508323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc36b2f3e6f1b9%3A0xb9de3f0b9f0f0f0f!2sKuala%20Lumpur!5e0!3m2!1sen!2smy!4v1600000000000!5m2!1sen!2smy" 
+            width="100%" 
+            height="400" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>Copyright &copy; FitLife Portal. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
